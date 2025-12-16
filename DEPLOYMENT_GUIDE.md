@@ -43,7 +43,7 @@ git add .
 git commit -m "Initial commit: Real Estate Platform"
 
 # Add remote (replace with your GitHub URL)
-git remote add origin https://github.com/soumikgoswami/Real_Estate_Website
+git remote add origin https://github.com/soumikgoswami/real
 
 # Push to GitHub
 git branch -M main
