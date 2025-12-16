@@ -9,6 +9,7 @@ import os
 import pandas as pd
 from typing import Optional, List, Any, Dict
 from fastapi.middleware.cors import CORSMiddleware
+from starlette.middleware.trustedhost import TrustedHostMiddleware
 from fastapi.responses import JSONResponse, StreamingResponse
 from passlib.context import CryptContext
 from datetime import datetime, timedelta
@@ -48,6 +49,10 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Accept requests from any host header (helps when behind proxies like Railway).
+# For production, replace ['*'] with explicit domains for security.
+app.add_middleware(TrustedHostMiddleware, allowed_hosts=["*"])
 
 # Authentication Configuration
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")

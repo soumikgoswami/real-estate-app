@@ -10,7 +10,7 @@ This file contains copy-paste PowerShell commands to run the backend and fronten
 
 ### Activate the backend virtualenv
 ```powershell
-cd 'C:\Users\SOUMIK\Downloads\infosys_internship-main\infosys_internship-main'
+cd 'C:\Users\SOUMIK\Desktop\AI-based_Real_Estate_Management_System'
 . '.\backend_env\Scripts\Activate.ps1'
 ```
 
@@ -36,8 +36,8 @@ python -m uvicorn backend.app.main:app --host 0.0.0.0 --port 8000
 ### Start backend as a detached background process (non-blocking)
 ```powershell
 # Uses venv python to start uvicorn in a new hidden window
-cd 'C:\Users\SOUMIK\Downloads\infosys_internship-main\infosys_internship-main'
-Start-Process -FilePath '.\backend_env\Scripts\python.exe' -ArgumentList '-m','uvicorn','backend.app.main:app','--host','0.0.0.0','--port','8000' -WorkingDirectory 'C:\Users\SOUMIK\Downloads\infosys_internship-main\infosys_internship-main' -WindowStyle Hidden
+cd 'C:\Users\SOUMIK\Desktop\AI-based_Real_Estate_Management_System'
+Start-Process -FilePath '.\backend_env\Scripts\python.exe' -ArgumentList '-m','uvicorn','backend.app.main:app','--host','0.0.0.0','--port','8000' -WorkingDirectory 'C:\Users\SOUMIK\Desktop\AI-based_Real_Estate_Management_System' -WindowStyle Hidden
 ```
 
 ### Stop backend (stop process listening on port 8000)
@@ -61,27 +61,27 @@ Invoke-WebRequest -Uri 'http://localhost:8000/' -UseBasicParsing | Select-Object
 
 ### Install dependencies (one-time or when package.json changes)
 ```powershell
-cd 'C:\Users\SOUMIK\Downloads\infosys_internship-main\infosys_internship-main'
+cd 'C:\Users\SOUMIK\Desktop\AI-based_Real_Estate_Management_System'
 npm install
 ```
 
 ### Start frontend (foreground)
 ```powershell
-cd 'C:\Users\SOUMIK\Downloads\infosys_internship-main\infosys_internship-main'
+cd 'C:\Users\SOUMIK\Desktop\AI-based_Real_Estate_Management_System'
 npm start
 # This will block the terminal and stream the dev server logs
 ```
 
 ### Start frontend in a new visible cmd window (non-blocking, see logs there)
 ```powershell
-cd 'C:\Users\SOUMIK\Downloads\infosys_internship-main\infosys_internship-main'
-Start-Process -FilePath 'cmd.exe' -ArgumentList '/c','start','cmd.exe','/k','npm','start' -WorkingDirectory 'C:\Users\SOUMIK\Downloads\infosys_internship-main\infosys_internship-main'
+cd 'C:\Users\SOUMIK\Desktop\AI-based_Real_Estate_Management_System'
+Start-Process -FilePath 'cmd.exe' -ArgumentList '/c','start','cmd.exe','/k','npm','start' -WorkingDirectory 'C:\Users\SOUMIK\Desktop\AI-based_Real_Estate_Management_System'
 ```
 
 ### Start frontend detached (background) via Start-Process (no visible logs)
 ```powershell
-cd 'C:\Users\SOUMIK\Downloads\infosys_internship-main\infosys_internship-main'
-Start-Process -FilePath 'npm' -ArgumentList 'start' -WorkingDirectory 'C:\Users\SOUMIK\Downloads\infosys_internship-main\infosys_internship-main' -WindowStyle Hidden
+cd 'C:\Users\SOUMIK\Desktop\AI-based_Real_Estate_Management_System'
+Start-Process -FilePath 'npm' -ArgumentList 'start' -WorkingDirectory 'C:\Users\SOUMIK\Desktop\AI-based_Real_Estate_Management_System' -WindowStyle Hidden
 ```
 
 ### Stop frontend (stop node process on port 3000)

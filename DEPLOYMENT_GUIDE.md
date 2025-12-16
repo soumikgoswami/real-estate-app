@@ -31,7 +31,7 @@ Deploy your application to the cloud in **45 minutes** using Vercel (Frontend) +
 In PowerShell, navigate to your project and run:
 
 ```powershell
-cd c:\Users\SOUMIK\Downloads\infosys_internship-main\infosys_internship-main
+cd c:\Users\SOUMIK\Desktop\AI-based_Real_Estate_Management_System
 
 # Initialize git (if not already done)
 git init
